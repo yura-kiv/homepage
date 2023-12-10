@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@200;300;400;500;600&display=swap");
+
 /*========================================================*/
 /*=====================General styles=====================*/
 
@@ -7,268 +9,286 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Rethink Sans", sans-serif;
+  min-height: 100vh;
+  width: 100%;
   line-height: 1.5;
-
-  --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
-  --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 30px;
-  max-width: 900px;
+/*========================================================*/
+/*====================Body gradient=====================*/
+body {
+  background: linear-gradient(226deg, #bdeec3, #ccdbf5, #feffd8);
+  background-size: 600% 600%;
+
+  -webkit-animation: BodyGradient 20s ease infinite;
+  -moz-animation: BodyGradient 20s ease infinite;
+  animation: BodyGradient 20s ease infinite;
 }
 
-.fh {
+@-webkit-keyframes BodyGradient {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+@-moz-keyframes BodyGradient {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+@keyframes BodyGradient {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+
+/*========================================================*/
+/*====================Resume Block Gradients=====================*/
+.background_gradient_1 {
+  background-color: #89cf92;
+  background-image: linear-gradient(120deg, #89cf92 0%, #e9ec80 51%, #ffcc70 90%);
+}
+
+.background_gradient_2 {
+  background-color: #89cf92;
+  background-image: linear-gradient(45deg, #89cf92 0%, #e9ec80 51%, #ffcc70 90%);
+}
+
+.background_gradient_3 {
+  background-color: #d6d6d6;
+  background-image: linear-gradient(45deg, #d6d6d6 0%, #e9ec80 51%, #ffcc70 90%);
+}
+
+.background_gradient_4 {
+  background-color: #89cf92;
+  background-image: linear-gradient(129deg, #89cf92 0%, #e9ec80 51%, #dad6d3 90%);
+}
+
+.background_gradient_5 {
+  background-color: #91e89d;
+  background-image: linear-gradient(225deg, #91e89d 0%, #e0e293 51%, #e6e6e6 90%);
+}
+
+/*========================================================*/
+/*====================Resume Block=====================*/
+
+main {
+  padding: 30px 0px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.fv {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .resume {
-  margin: 50px auto;
-  border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
-  padding: 30px 0;
-  max-width: 900px;
+  padding: 0px 25px;
 }
 
-.resume__block {
-  border-bottom: 3px solid var(--border-color);
-  padding-bottom: 30px;
-  margin-bottom: 15px;
-}
-
-@media screen and (max-width: 576px) {
-  .main-info,
-  .contact_info_container {
-    flex-direction: column;
-  }
-
-  .contact_info_container {
-    align-items: center;
-  }
-
-  .contact-info__block:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  .experiences {
-    margin-right: 0;
-  }
-}
-
-/*========================================================*/
-/*==================Contact info styles===================*/
-
-.contact-info__header,
-.contact-info__sub-header {
-  text-align: center;
-}
-
-.contact-info__header {
-  color: var(--primary-text-color);
-  margin-bottom: 15px;
-  text-decoration-color: var(--text-decoration-color);
-  text-decoration-line: underline;
-}
-
-.contact-info__sub-header {
-  color: var(--secondary-text-color);
-  margin-bottom: 30px;
-}
-
-.contact-info__block {
+.resume__header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-}
-
-.contact-info__block--center {
-  justify-content: center;
-}
-
-.contact-info__item {
-  color: var(--secondary-text-color);
-  text-decoration: none;
-  display: flex;
-  justify-content: start;
-}
-
-.contact-info__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.contact-info__item-icon-wrapper {
-  margin-right: 10px;
-  width: 20px;
+.header__container {
+  font-weight: 500;
+}
+
+.resume__container {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.contact-info__item-icon path {
-  fill: var(--icon-color);
+.resume__container--introduction {
+  margin-bottom: 20px;
 }
 
-.contact-info__item-icon {
-  height: 1.1428rem;
-  vertical-align: text-bottom;
+.resume__container--skills {
+  margin-bottom: 20px;
 }
 
-.contact-info__avatar {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+.resume__card {
+  position: relative;
+  flex-grow: 1;
+  padding: 20px 30px;
+  border-radius: 12px;
+  user-select: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.resume__card:hover:not(.resume__card--buttons) {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
+.resume__card--avatar {
+  width: 100%;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.resume__card--avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
   object-fit: cover;
-  border: 3px solid;
-  border-color: var(--text-decoration-color);
+  width: 100%;
+  height: 100%;
 }
 
-/*========================================================*/
-/*================Intro and skills styles=================*/
-
-.intro {
+.resume__card--buttons {
   display: flex;
-  justify-content: start;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
 }
 
-.intro__icon-wrapper {
-  margin-right: 30px;
-  width: 30px;
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 760px) {
+  .resume {
+    width: 70%;
+    max-width: 1020px;
+    min-width: 760px;
+  }
+
+  .resume__container {
+    display: grid;
+  }
+
+  .resume__card {
+    width: 100%;
+  }
+
+  .resume__container--skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resume__container--about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume__card--avatar {
+    min-width: 350px;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .resume__card--hard-skills {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .resume__card--soft-skills {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .resume__card--additional {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .resume__card--languages {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .resume__card--education {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
 }
 
-.intro__icon {
-  height: 1.1428rem;
-  vertical-align: text-bottom;
-}
-
-.intro__icon path {
-  fill: var(--text-decoration-color);
-}
-
-.intro_text {
-  color: var(--secondary-text-color);
-  text-align: justify;
-}
-
-.skills__header {
-  color: var(--secondary-text-color);
-  text-align: center;
+.card__header {
+  font-weight: 600;
+  font-size: 1.5em;
   margin-bottom: 15px;
 }
 
-.skills__text {
-  color: var(--secondary-text-color);
-  text-align: justify;
+.card__content {
+  font-weight: 400;
 }
 
-/*========================================================*/
-/*=========Experience and additional info styles==========*/
-
-.experiences {
-  flex: 1 1 60%;
-  margin-right: 50px;
+.card__button {
+  display: block;
+  height: 40px;
+  padding: 8px 12px 8px 8px;
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 0.9em;
+  display: flex;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
 }
 
-.experiences__header {
-  color: var(--secondary-text-color);
-  text-align: left;
-  margin-bottom: 20px;
+.card__button:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transform: translateY(-3px);
 }
 
-.experiences__company-header-durability {
-  color: var(--durability-text-color);
-  text-align: left;
+.button__icon {
+  display: block;
+  margin-right: 6px;
+  height: 25px;
+  width: 25px;
+}
+
+.button__icon svg {
+  margin-right: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.qualities-list {
+  margin-left: 20px;
+}
+
+.resume__notice {
+  display: block;
   margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.experiences__company-header-name {
-  color: var(--primary-text-color);
-  text-decoration-color: var(--text-decoration-color);
-  text-decoration-line: underline;
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.experiences__company-project {
-  margin-left: 15px;
-  margin-bottom: 25px;
-}
-
-.experiences__company-project-role {
-  color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.experiences__company-project-name {
-  color: var(--primary-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.experiences__company-project-responsibilities {
-  color: var(--secondary-text-color);
-  padding-left: 20px;
-}
-
-.additional-info {
-  flex: 1 1 40%;
-}
-
-.additional-info__education {
-  margin-bottom: 20px;
-}
-
-.additional-info__education-header {
-  color: var(--secondary-text-color);
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.additional-info__education-university-durability {
-  color: var(--durability-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-
-.additional-info__education-university-speciality {
-  color: var(--primary-text-color);
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.additional-info__education-university-name {
-  color: var(--secondary-text-color);
-}
-
-.additional-info__languages {
-  margin-bottom: 20px;
-}
-
-.additional-info__languages-header {
-  color: var(--secondary-text-color);
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.additional-info__languages-item {
-  color: var(--secondary-text-color);
+  font-size: 2em;
+  margin-left: 5px;
 }

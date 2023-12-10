@@ -16,11 +16,17 @@
     <main>
       <div class="resume">
         <div class="resume__header">
-          <div class="header__block">&#9711; Resume</div>
-          <div class="header__block">Kiyv, Ukraine</div>
-          <div class="header__block">Kivlyuk Yura, 20</div>
+          <div class="header__container">&#9711; Resume</div>
+          <div class="header__container">Kiyv, Ukraine</div>
+          <div class="header__container">Kivlyuk Yura, 20</div>
         </div>
         <div class="resume__container resume__container--introduction">
+          <div class="resume__card resume__card--avatar">
+            <img
+              src="./assets/avatar.png"
+              alt="avatar"
+            />
+          </div>
           <div class="resume__card background_gradient_1">
             <div class="card__header">
               <p>
@@ -40,15 +46,12 @@
               <p>I will be very motivated to participate in the development joint projects.</p>
             </div>
           </div>
-          <div class="resume__card resume__card--avatar">
-            <img
-              src="./assets/avatar.png"
-              alt="avatar"
-            />
-          </div>
           <div class="resume__card resume__card--buttons">
-            <button class="card__button">
-              <div class="button__icon">
+            <a
+              href="https://t.me/yura_kiv"
+              class="card__button"
+            >
+              <span class="button__icon">
                 <svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -59,11 +62,14 @@
                     fill="white"
                   />
                 </svg>
-              </div>
+              </span>
               <span>@yura_kiv</span>
-            </button>
-            <button class="card__button">
-              <div class="button__icon">
+            </a>
+            <a
+              href="https://www.linkedin.com/in/yura-kivlyuk/"
+              class="card__button"
+            >
+              <span class="button__icon">
                 <svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -74,21 +80,141 @@
                     fill="white"
                   />
                 </svg>
-              </div>
+              </span>
               <span>LinkedIn</span>
-            </button>
-            <button
+            </a>
+
+            <a
+              href="tel:380971860388"
               class="card__button"
               style="padding: 8px 14px"
             >
               <span>+380971860388</span>
-            </button>
-            <button
+            </a>
+            <a
+              href="mailto:kivlyukyura@gmail.com"
               class="card__button"
               style="padding: 8px 14px"
             >
               <span>kivlyukyura@gmail.com</span>
-            </button>
+            </a>
+          </div>
+        </div>
+        <h2 class="resume__notice">Lists of skills:</h2>
+        <div class="resume__container resume__container--skills">
+          <div class="resume__card resume__card--hard-skills background_gradient_2">
+            <div class="card__header">
+              <p>Hard skills:</p>
+            </div>
+            <div class="card__content">
+              <ul class="qualities-list">
+                <li>HTML</li>
+                <li>CSS, SCSS</li>
+                <li>JavaScript, TypeScript</li>
+                <li>Tailwind, MUI, Bootstrap</li>
+                <li>React</li>
+                <li>Redux, RTK</li>
+                <li>Git</li>
+                <li>Node.js + Express.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume__card resume__card--soft-skills background_gradient_3">
+            <div class="card__header">
+              <p>Soft skills:</p>
+            </div>
+            <div class="card__content">
+              <ul class="qualities-list">
+                <li>Creative</li>
+                <li>Attentive to detaile</li>
+                <li>Responsible</li>
+                <li>Motivated and selforganized</li>
+                <li>Team player</li>
+                <li>Ready to take initiative</li>
+                <li>Open to new knowledge</li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume__card resume__card--additional background_gradient_4">
+            <div class="card__header">
+              <p>Additional:</p>
+            </div>
+            <div class="card__content">
+              <ul class="qualities-list">
+                <li>Figma</li>
+                <li>Illustrator</li>
+                <li>Photoshop</li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume__card resume__card--languages background_gradient_5">
+            <div class="card__header">
+              <p>Languages:</p>
+            </div>
+            <div class="card__content">
+              <ul class="qualities-list">
+                <li>Ukrainian - Native</li>
+                <li>English - Intermediate</li>
+              </ul>
+            </div>
+          </div>
+          <div class="resume__card resume__card--education background_gradient_1">
+            <div class="card__header">
+              <p>Education:</p>
+            </div>
+            <div class="card__content">
+              <ul class="qualities-list">
+                <li>
+                  Taras Shevchenko National University of Kyiv – Software Engineering – 4th year
+                  student
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume__container resume__container--about">
+          <div>
+            <h2 class="resume__notice">About me:</h2>
+            <div class="resume__card background_gradient_4">
+              <div class="card__content">
+                <p>I am a 4th-year student of the specialty "Software Engineering".</p>
+                <p>
+                  I like to start developing projects from scratch and find solutions to problems
+                  that arise at various stages of development.
+                </p>
+                <p>
+                  Lately I've been focusing on web development and learning the technologies listed
+                  in the hard skills list. I like to make modern and stylish interface design.
+                </p>
+                <p>
+                  I want to be part of a team of like-minded people develop their skills and develop
+                  joint ambitious projects.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <h2 class="resume__notice">Experience:</h2>
+            <div class="resume__card background_gradient_2">
+              <ul class="qualities-list">
+                <li>
+                  2019-2021:<br />
+                  <p style="margin-bottom: 10px">
+                    Freelance work on Englishlanguage resources as a designer (development of
+                    website layouts, branding, logos, illustrations, etc.)
+                  </p>
+                </li>
+                <li>
+                  2019-2021:<br />
+                  <p>
+                    Freelance worker on startups and personal projects for businesses. Creation of
+                    landing pages and multi-page sites.
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

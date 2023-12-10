@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@200;300;400;500;600&display=swap");
+
+/*========================================================*/
+/*=====================General styles=====================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Rethink Sans", sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  line-height: 1.5;
+}
+
+/*========================================================*/
+/*====================Body gradient=====================*/
+body {
+  background: linear-gradient(226deg, #bdeec3, #ccdbf5, #feffd8);
+  background-size: 600% 600%;
+
+  -webkit-animation: BodyGradient 20s ease infinite;
+  -moz-animation: BodyGradient 20s ease infinite;
+  animation: BodyGradient 20s ease infinite;
+}
+
+@-webkit-keyframes BodyGradient {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+@-moz-keyframes BodyGradient {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+@keyframes BodyGradient {
+  0% {
+    background-position: 0% 96%;
+  }
+  50% {
+    background-position: 100% 5%;
+  }
+  100% {
+    background-position: 0% 96%;
+  }
+}
+
+/*========================================================*/
+/*====================Resume Block Gradients=====================*/
+.background_gradient_1 {
+  background-color: #89cf92;
+  background-image: linear-gradient(120deg, #89cf92 0%, #e9ec80 51%, #ffcc70 90%);
+}
+
+.background_gradient_2 {
+  background-color: #89cf92;
+  background-image: linear-gradient(45deg, #89cf92 0%, #e9ec80 51%, #ffcc70 90%);
+}
+
+.background_gradient_3 {
+  background-color: #d6d6d6;
+  background-image: linear-gradient(45deg, #d6d6d6 0%, #e9ec80 51%, #ffcc70 90%);
+}
+
+.background_gradient_4 {
+  background-color: #89cf92;
+  background-image: linear-gradient(129deg, #89cf92 0%, #e9ec80 51%, #dad6d3 90%);
+}
+
+.background_gradient_5 {
+  background-color: #91e89d;
+  background-image: linear-gradient(225deg, #91e89d 0%, #e0e293 51%, #e6e6e6 90%);
+}
+
+/*========================================================*/
+/*====================Resume Block=====================*/
+
+main {
+  padding: 30px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.resume {
+  padding: 0px 25px;
+}
+
+.resume__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header__container {
+  font-weight: 500;
+}
+
+.resume__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.resume__container--introduction {
+  margin-bottom: 20px;
+}
+
+.resume__container--skills {
+  margin-bottom: 20px;
+}
+
+.resume__card {
+  position: relative;
+  flex-grow: 1;
+  padding: 20px 30px;
+  border-radius: 12px;
+  user-select: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.resume__card:hover:not(.resume__card--buttons) {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  cursor: pointer;
+}
+
+.resume__card--avatar {
+  width: 100%;
+  height: 35vh;
+  overflow: hidden;
+}
+
+.resume__card--avatar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.resume__card--buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+}
+
+@media screen and (min-width: 760px) {
+  .resume {
+    width: 70%;
+    max-width: 1020px;
+    min-width: 760px;
+  }
+
+  .resume__container {
+    display: grid;
+  }
+
+  .resume__card {
+    width: 100%;
+  }
+
+  .resume__container--skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resume__container--about {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resume__card--avatar {
+    min-width: 350px;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .resume__card--hard-skills {
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+
+  .resume__card--soft-skills {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .resume__card--additional {
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+
+  .resume__card--languages {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .resume__card--education {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+}
+
+.card__header {
+  font-weight: 600;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.card__content {
+  font-weight: 400;
+}
+
+.card__button {
+  display: block;
+  height: 40px;
+  padding: 8px 12px 8px 8px;
+  background-color: black;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 0.9em;
+  display: flex;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
+}
+
+.card__button:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transform: translateY(-3px);
+}
+
+.button__icon {
+  display: block;
+  margin-right: 6px;
+  height: 25px;
+  width: 25px;
+}
+
+.button__icon svg {
+  margin-right: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.qualities-list {
+  margin-left: 20px;
+}
+
+.resume__notice {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2em;
+  margin-left: 5px;
+}
